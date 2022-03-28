@@ -1,0 +1,90 @@
+<div class="container">
+    <img src="assets/image.jpg" width="100%" height="500px">
+    <div class="centered">
+    <!--search buses starts-->
+<input type="search" #employee class="search1" placeholder="FROM">
+<input type="search" #search class="search2" placeholder="TO">
+<button (click)="getValue(employee.value,search.value)" class="btn btn-danger">search</button>
+</div>
+</div>
+
+<!--search buses ends-->
+
+<!--buses data starts-->
+<!--buses 01 starts-->
+<div *ngFor="let obj of sampleData">
+<div class="card">
+    <div class="card-header">
+        Sai Travels
+    </div>
+    <div class="card-body">
+        <p>From:{{obj.from}}</p> 
+        <p>To:{{obj.to}}</p>
+        <p>Date:{{obj.date}}</p>
+        <p>Fare: {{obj.fare}}</p>
+        <p><button class="btn btn-danger" routerLink="/cart/{{obj['_id']}}">Book</button></p>
+    </div>
+</div></div>
+<!--buses 02 starts-->
+<div *ngFor="let obj of sampleData">
+<div class="card">
+    <div class="card-header">
+        Krishna Travels
+    </div>
+    <div class="card-body">
+        <p><img class="fl icon-city icon">From:{{obj.from}}</p> 
+        <p>To:{{obj.to}}</p>
+        <p>Date:{{obj.date}}</p>
+        <p>Fare: {{obj.fare}}</p>
+        <p><button href="#" class="btn btn-danger" routerLink="/cart">Book</button></p>
+    </div>
+</div>
+</div>
+<!--buses 03 starts-->
+<div *ngFor="let obj of sampleData">
+<div class="card">
+    <div class="card-header">
+        Ravi Travels
+    </div>
+    <div class="card-body">
+        <p>From:{{obj.from}}</p> 
+        <p>To:{{obj.to}}</p>
+        <p>Date:{{obj.date}}</p>
+        <p>Fare: {{obj.fare}}</p>
+        <p><button href="#" class="btn btn-danger" routerLink="/cart">Book</button></p>
+    </div>
+</div>
+</div>
+<!--buses 04 starts-->
+<div *ngFor="let obj of sampleData">
+<div class="card">
+    <div class="card-header">
+        Sammeta Travels
+    </div>
+    <div class="card-body">
+        <p>From:{{obj.from}}</p> 
+        <p>To:{{obj.to}}</p>
+        <p>Date:{{obj.date}}</p>
+        <p>Fare: {{obj.fare}}</p> 
+        <p><button href="#" class="btn btn-danger" routerLink="/cart">Book</button></p>
+    </div>
+</div></div>
+<!--buses 05 starts-->
+<div *ngFor="let obj of sampleData">
+<div class="card">
+    <div class="card-header">
+        KPN Travels
+    </div>
+    <div class="card-body">
+        <p>From:{{obj.from}}</p> 
+        <p>To:{{obj.to}}</p>
+        <p>Date:{{obj.date}}</p>
+        <p>Fare: {{obj.fare}}</p>
+        <p><button href="#" class="btn btn-danger" routerLink="/cart">Book</button></p>
+    </div>
+</div>
+</div>
+<!--buses data ends-->
+
+<app-home></app-home>
+

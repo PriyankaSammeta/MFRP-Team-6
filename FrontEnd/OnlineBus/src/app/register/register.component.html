@@ -1,0 +1,40 @@
+<br>
+
+<h1 style="padding-left: 40%;"><strong>Register Form</strong></h1>
+<div style="color: aquamarine;">
+  <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+
+    <div class="input-container">
+      <i class="fa fa-user icon" style="background-color:brown"></i>
+
+      <input type="text" name="firstName" ngModel placeholder="first-Name" id="firstName" class="col-md-4"><br>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-user icon" style="background-color:brown"></i>
+
+      <input type="text" name="lastName" ngModel placeholder="lastName" id="lastName" class="col-md-4"><br>
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-envelope icon" style="background-color:brown"></i>
+
+      <input type="text" name="email" ngModel placeholder="email" id="email" class="col-md-4"><br>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-key icon" style="background-color:brown"></i>
+
+      <input type="password" name="password" ngModel placeholder="password" id="password" class="col-md-4"><br>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-home icon" style="background-color:brown"></i>
+
+      <input type="text" name="address" ngModel placeholder="address" id="address" class="col-md-4"><br>
+    </div>
+    <div class="input-container">
+      <i class="fa fa-phone icon" style="background-color:brown"></i>
+
+      <input type="text" name="phoneNumber" ngModel placeholder="phoneNumber" id="phoneNumber" class="col-md-4"><br>
+    </div>
+    <button type="submit" (click)="Reg()" class="register" routerLink="/login">Register</button>
+  </form>
+</div>

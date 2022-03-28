@@ -1,0 +1,26 @@
+.card-body{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+  .card{
+    margin:40px;
+    font-size: larger;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left:0%;
+}
+
+/*search part starts*/
+.search1, .search2{
+  height:40px;
+  margin-right: 30px;
+  padding-right: 40px;
+}
+
+  

@@ -1,0 +1,67 @@
+<div class="Cart-Container">
+    <div class="Header">
+        <h3 class="Heading">My Bus Bookings</h3>
+    </div>
+    <div class="Cart-Items">
+
+
+        <!-- seats -->
+        <div class="about">
+            <h1 class="title">Bus Booking</h1><br>
+
+        </div>
+        <div class="counter" *ngFor="let busbook of busdata">
+            <div class="btn" (click)="inc(busbook)">+</div>
+            <div class="count">{{busbook.seat}}</div>
+            <div class="btn" (click)="dec(busbook)">-</div>
+        </div>
+
+        <div class="prices" *ngFor="let busbook of busdata">
+            <div class="amount">price={{busbook.fare * busbook.seat}}</div>
+        </div>
+
+    </div>
+    <hr>
+
+    <!-- pricing -->
+    <div class="checkout">
+        <div class="total">
+            <div>
+                <div class="Subtotal">Total</div>
+                <div class="items" *ngFor="let busbook of busdata">{{busbook.seat}} Seats</div>
+            </div><br>
+            <div class="total-amount" *ngFor="let busbook of busdata">Rs.{{price}} * {{busbook.seat}} = Rs.{{price *
+                busbook.seat}}/-</div>
+        </div><br>
+        <div class="abc" *ngFor="let busbook of busdata"><button class="button1"
+                onclick="document.getElementById('id01').style.display='block'">Proceed to Book </button></div>
+    </div>
+
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"></span>
+        <form class="modal-content">
+
+            <div class="container1" style="padding-left: 400px;">
+                <img class="ab" style="padding-top: 100px;"
+                    src="https://www.legalraasta.com/wp-content/uploads/2017/06/legalraasta.gif" />
+                <h1>Booking is successfull</h1>
+                <button class="button1" routerLink="/home">Happy Journey</button><br><br>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
